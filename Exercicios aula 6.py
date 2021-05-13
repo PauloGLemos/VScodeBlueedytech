@@ -1,4 +1,5 @@
 #1. Faça um programa, com uma função que necessite de três argumentos, e que forneça a soma desses três argumentos.
+#teste
 
 def soma():
         var1 = int(input("Digite num1:" ))
