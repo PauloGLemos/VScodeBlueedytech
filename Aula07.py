@@ -23,7 +23,7 @@ def soma(x, y):
 
     soma(3,5)
     total = 10
-    print("Valor", total)'''
+    print("Valor", total)
 
 def aumento_salarial(salario, percentual):
         novo_salario = salario*percentual/100 + salario
@@ -35,7 +35,7 @@ print(salario_fulano)
 import math
 
 a = math.pi
-print(a)
+print(a)'''
 
 
 
