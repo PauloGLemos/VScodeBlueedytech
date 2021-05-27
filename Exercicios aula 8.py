@@ -50,12 +50,26 @@ print(var1*0.18)
 
 print("------------------------------------------------------------------------------------------")'''
 
-senha = 'teste'
+'''senha = 'teste'
 entrada = input('Digite a Senha: ')
 while entrada != senha:
     print('a senha esta errada')
     entrada = input('Digite a Senha novamente: ')
 print('A senha digitada esta correta ')
-'''else:
+    else:
     entrada == senha
     print('A senha digitada esta correta ')'''
+
+
+
+nome = input('Digite o seu nome: ')
+partidas = int(input('Digite a quantidade de partidas: '))
+
+lista1 = []
+
+for jogo in range(partidas):
+    lista1.append(int(input(f'quantos gols foram feitos na partida {jogo+1}? :')))
+    totalgosl = sum(lista1)
+
+dicionario = {"Nome":nome,"Partidas":partidas,"Gols":lista1}
+print(f'o jogador{dicionario["Nome"]} jogou {dicionario["Partidas"]} e fez um total de{dicionario["lista1"]}')
