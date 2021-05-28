@@ -1,3 +1,6 @@
+from time import process_time
+
+
 print()
 
 print( '                      ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓                      ')
@@ -107,12 +110,12 @@ if(__name__ == "__main__"):
             print()
 
             personagem.exercicio = False
-            personagem.sujo
+            personagem.sujo = True
             relogio.avancaTempo(60)
         elif(opcao == '4'):
             print( '┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓')
             print( '┃                      ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓                  ┃')
-            print( '┃                      ┃ Dando comida ao Cachorro...┃                   ┃')
+            print( '┃                      ┃ Dando comida ao Cachorro...┃                  ┃')
             print( '┃                      ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛                  ┃')
             print( '┃                                 __      _                            ┃')
             print( '┃                               ○‘‘)}____//                            ┃')
@@ -140,6 +143,10 @@ if(__name__ == "__main__"):
             print( '┗━━━╨━━━━━━━━╨━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╨━━━━━━━━━┛')
             print()
 
+            print('Voce chegou ao trabalho, agora voce tera que resolver : ')
+            print()
+            play = input(" Aperte uma tecla para iniciar o jogo ")
+            
             if personagem.fome == True:
                 personagem.humor -= 10
             if personagem.sujo == True:
@@ -151,11 +158,22 @@ if(__name__ == "__main__"):
                 personagem.humor -= 10
             if relogio.atrasado():
                 personagem.humor -= 15
-            print("-=-|-=-|-=-|-=-|-=-|-=-|-=-|-=-|-=-|")
-            print("Você foi trabalhar.")
-            print(personagem)
-            print("-=-|-=-|-=-|-=-|-=-|-=-|-=-|-=-|-=-|")
 
+            import os
+            import time
+
+            s=60
+
+        while s<=60 and s>=0:
+            os.system('cls')
+            print (s, 'Seconds')
+            time.sleep(1)
+            s-=1
+        if s<=0:
+            print("voce falhou no trabalho")
+            personagem.humor -= 30
+            break
+            
         elif(opcao == "0"):
             print( '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━')
             print( '                      ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓                      ')
